@@ -1,0 +1,157 @@
+#contactMe {
+    #container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 10px auto;
+        padding-top: 50px;
+        /* align-items: center; */
+    }
+    form{
+        width: 50%;
+        padding: 20px;
+        color: var(--textColr);
+        #name{
+            margin:  2rem 0;
+            position: relative;
+            
+            height: 70px;
+            & label{
+                color: var(--parColor);
+                /* background-color: var(--bg-color); */
+                position: absolute;
+                left: 20px;
+                top: 0;
+                transform: translateY(50%);
+                transition:0.2s ;
+                -webkit-transition:0.2s ;
+                -moz-transition:0.2s ;
+                -ms-transition:0.2s ;
+                -o-transition:0.2s ;
+                /*transform: translateY(50%);
+                -webkit-transform: translateY(50%);
+                -moz-transform: translateY(50%);
+                -ms-transform: translateY(50%);
+                -o-transform: translateY(50%);
+                */border: 0px solid var(--SpanColr);
+                padding: 5px;
+                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                -ms-border-radius: 15px;
+                -o-border-radius: 15px;
+                z-index:0;
+              
+}
+
+        }
+        textarea{
+            min-height: 125px;
+            max-height: 165px;
+            resize: vertical;
+        }
+        & input,textarea{
+            outline: none;
+            background-color: var(--bg-2) !important;
+            border: 1px solid var(--SpanColr);
+            width: 80%;
+            border-radius: 10px;
+            height: 100%;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            color: var(--textColr);
+            padding:15px;
+
+}
+#send{
+                  
+    background-color: var(--SpanColr);
+    padding: 5px 10px;
+    color: black;
+    border-radius:20px ;
+    -webkit-border-radius:20px ;
+    -moz-border-radius:20px ;
+    -ms-border-radius:20px ;
+    -o-border-radius:20px ;
+    cursor: pointer;
+    margin-top: 100px;
+    width: 10rem;
+    height: 50px;
+    border: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+    }
+   
+    #contactInvo{
+        color: var(--textColr);
+        width: 50%;
+        padding: 20px;
+        #infoIcon{
+            display: flex;
+            margin: 2rem 0;
+            align-items: center;
+            gap: 10px;
+            color: var(--parColor);
+            & h3{
+                color: var(--SpanColr);
+            }
+            svg{
+              
+                color: var(--SpanColr);
+                border-radius: 50% !important;
+                border-radius: 10px;
+                font-size: 50px;
+                border: 1px solid transparent;
+                padding: 5px;
+                transition: 0.5s;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+                -webkit-transition: 0.5s;
+                -moz-transition: 0.5s;
+                -ms-transition: 0.5s;
+                -o-transition: 0.5s;
+}
+            div{
+                margin: 1rem;
+            }
+        }
+    }
+}
+ #contactInvo #infoIcon svg:hover{
+
+border-color: var(--SpanColr) !important; } 
+
+#contactMe form textarea:valid~label,
+#contactMe form textarea:focus~label{
+    background-color: var(--bg-2);
+    top: -50% !important;
+    z-index: 2 !important;
+    border-width: 1px !important;
+}
+
+
+
+
+#contactMe form input:focus~label,
+#contactMe form input:valid~label{
+    background-color: var(--bg-2);
+    top: -50% !important;
+    z-index: 2 !important;
+    border-width: 1px !important;
+
+}
+
+@media screen and (max-width:950px) {
+    #contactMe  #container{
+        width: 95%;
+        form{
+            width: 100%;
+        }
+    }
+}
