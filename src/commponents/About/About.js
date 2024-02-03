@@ -34,10 +34,10 @@ function About() {
          Seeking for new challenging positions and different experiences.
       </p>
       <ul>
-        <li><p>Birthday</p><span> : 01 01, 1994</span></li>
-        <li> <p>Phone</p><span> : +905346833726</span></li>
-        <li><p>Language</p> <span>: English, turkish,arabic</span></li>
-        <li><p>Freelance</p><span>: Available</span></li>
+        <li><p>Birthday:</p><span>  01 01, 1994</span></li>
+        <li> <p>Phone:</p><span>  +905346833726</span></li>
+        <li><p>Language:</p> <span> English, turkish,arabic</span></li>
+        <li><p>Freelance:</p><span> Available</span></li>
 
       </ul>
       <a  href={RESUME} id='Download' download={"muhammedalbahle.pdf"}>Download CV</a>

@@ -25,7 +25,7 @@ if( window.innerWidth <= 950 && window.scrollY >= 5000  ){
    setscrol(true)
 }
 } 
-    console.log(window.scrollY);
+    
   const data =[
     {title:"html",value:80},
     {title:"css",value:80},
