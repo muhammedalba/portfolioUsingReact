@@ -22,9 +22,6 @@ function ContactMe() {
   return (
     <section id='contactMe'>
       <div id='container'>
-       
-
-      
         <form  ref={form} onSubmit={sendEmail}>
         <Fade direction='left'triggerOnce={true}>
           <h2>Just say Hello</h2>
@@ -46,8 +43,6 @@ function ContactMe() {
             <button type='submit' id='send'>send message</button>
             </Fade>
         </form>  
- 
-
         <div id='contactInvo'>
         <Fade direction='up' triggerOnce={true}>
 
@@ -79,7 +74,6 @@ function ContactMe() {
           
            </Fade>
         </div>
-      
      </div>  
       
         

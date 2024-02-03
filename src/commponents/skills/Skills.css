@@ -1,0 +1,117 @@
+#section4{
+    height:  auto;
+     background-color: var(--bg-2);
+     color: var(--textColr);
+     overflow-x: hidden; 
+ }
+
+#section4 #imgeSkills{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    gap: 15px;
+    margin: 0 auto;
+}
+#section4 #imgeSkills svg{ 
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+        border: 1px solid var(--textColr);
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        padding: 15px;
+        margin: 20px;
+        color: var(--SpanColr);
+}
+#section4 #imgeSkills img{
+        width: 150px ;
+        height: 150px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;       
+}
+#section4 #imgeSkills div{
+    margin: 0 !important;
+}
+#imgeSkills svg:hover{
+    color: var(--SpanColr);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-color: var(--SpanColr);
+}
+#section4 #skills{
+display: flex;
+width: 100%;
+flex-wrap: wrap;
+padding-bottom: 2rem;
+align-items: center;
+
+& #skillTitle{
+    width: 50%;
+    padding-top: 50px;
+}
+& #skillsProgress{
+    width: 50%;
+    padding: 0 50px;
+}
+& h2{
+margin: 10px 0;
+}
+& p{
+color: var(--parColor);
+}
+
+}
+/*  progresses*/
+#progresses{
+    width: 100%;
+    margin: 2rem 0;
+}
+#progresses h4{
+    margin: 20px 0;
+    font-size: 25px;
+}
+#progresses #progess{ 
+    width: 100%; 
+    background-color:var(--parColor); 
+    height: 5px; 
+    border-radius:10px ;
+     -webkit-border-radius:10px ; 
+    -moz-border-radius:10px ; 
+    -ms-border-radius:10px ;
+     -o-border-radius:10px ; 
+
+}
+#progresses #livel{
+
+    background-color: var(--SpanColr);
+    height: 100%;
+    position: relative;
+    transition: 5s ease;
+    border-radius: 10px;
+   -webkit-transition: 5s ease;
+    -moz-transition: 5s ease;
+    -ms-transition: 5s ease;
+    -o-transition: 5s ease;
+    -webkit-border-radius:10px ;
+    -moz-border-radius:10px ;
+    -ms-border-radius:10px ;
+    -o-border-radius:10px ;
+
+}
+#progresses span{
+    position: absolute;
+      right: -25px;
+      top: -25px;
+      color: var(--SpanColr);
+  }

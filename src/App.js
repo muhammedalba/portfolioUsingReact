@@ -1,16 +1,16 @@
-import React, { useEffect } from "react"
+import React from "react"
 import './App.css';
-import Section2 from"./commponents/section2/Section2"
+import Section2 from"./commponents/About/About"
 import NavBar from "./commponents/NavBar/NavBar";
-import Section1 from "./commponents/sections1/Section1";
-import Section3 from "./commponents/section3/Section3";
+import Section1 from "./commponents/main/Main";
+import Section3 from "./commponents/service/Service";
 import Title from "./commponents/Title/Title";
-import Section4 from "./commponents/section4/Section4"
+import Section4 from "./commponents/skills/Skills"
 // import Section5 from "./commponents/section5/Section5";
-import Section6 from "./commponents/section6/Section6";
+import Section6 from "./commponents/portfolio/Portfolio";
 import ContactMe from "./commponents/ContactMe/ContactMe";
 import Footer from "./commponents/footer/Footer";
-
+import './Media/MediaCss.css'
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
       <Section1/>
       <Title  text={"about me"} bgColor={"#0a101e"}/>
       <Section2/>
-      <Title  text={"serves"} bgColor={"#070d1b"}/>
+      <Title  text={"services"} bgColor={"#070d1b"}/>
       <Section3/>
       <Title   text={"my skills"} bgColor={"#0a101e"}/>
       <Section4/>

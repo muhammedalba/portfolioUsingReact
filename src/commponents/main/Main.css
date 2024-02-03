@@ -1,0 +1,125 @@
+#section1{
+    background: url("../../imges/hero-bg-1.jpg") no-repeat center;
+    width: 100%;
+    min-height:calc(100vh - 70px);
+    color: var(--textColr);
+    z-index: 11;
+    margin-top: 70px;
+} 
+#section1 canvas{
+    width: 100% !important;
+}
+
+#section1 div{
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: #ffff;
+    text-align: center;
+}
+#section1 div #social{
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    }
+#section1 #imge{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 10px solid var(--SpanColr);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#section1 div h1{
+    color: #ffff;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 5px 0;
+    width: 70%;
+}
+#section1 div span{
+    color: var(--SpanColr);
+    padding: 0 0.5rem;
+    letter-spacing: 2px;
+    font-size: 50px;
+    font-weight: 700;
+}
+#section1 #social li a{  
+        display: flex;
+        padding: 4px;
+        align-items: center;
+         transition: 1s;
+         border: 1px solid transparent;
+        border-radius: 50%;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        color: var(--textColr);
+}
+
+#social li:hover a{
+    border: 1px solid var(--SpanColr);
+    color: var(--SpanColr);
+}
+#social li a svg {
+    cursor: pointer;
+    font-size:35px;
+}
+#typed{
+    position: relative;
+}
+#typed::after{
+    width: auto;
+    height: 100%;
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    padding-right:0.5rem ;
+    content: "";
+    border-right: 4px solid var(--SpanColr);
+    animation:typed 4s infinite 0.5s linear;
+    -webkit-animation:typed 4s infinite 0.5s linear;
+}
+@keyframes typed {
+    10%{
+        
+        content: "m";
+        border-color: transparent;
+    }20%{
+        content: "mu";
+        border-color: var(--SpanColr);
+    }
+    30%{
+        content: "muh";
+        border-color: transparent;
+    }
+    40%{
+        content: "muha";
+        border-color: var(--SpanColr);
+    }
+    50%{
+        content: "muham";
+        border-color: transparent;
+       
+    }
+    60%{
+        content: "muhamm";
+         border-color: var(--SpanColr);
+    }
+    70%{
+        content: "muhamme";
+        border-color: transparent;
+    }
+    80%{
+        content: "muhammed";
+        border-color: var(--SpanColr); 
+    }
+   
+}
+

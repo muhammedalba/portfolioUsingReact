@@ -1,28 +1,22 @@
 import React, { useState } from "react";
-import "./NavBar.css";
 // icons
 import { FaPhoneAlt } from "react-icons/fa";
-import { MdOutlineDarkMode } from "react-icons/md";
+
 // imge
 // import imge from "../../imges/favicon.png";
-
 // reveal
-
 import { Slide } from "react-awesome-reveal";
-
 // react-scroll
 import { Link } from "react-scroll";
-
+// style css
+import "./NavBar.css";
+import '../../Media/MediaCss.css'
 
 
 function NavBar() {
-  window.onscroll = () => {
-    // console.log(window.scrollY,"scrol");
-    // console.log(window.scrollX,"scrolx");
-  };
 
   const [open, setopen] = useState(false);
-  const [dark, setdark] = useState(false);
+  // const [dark, setdark] = useState(false);
 const Links=[
   {title:"Home",path:"section1"},
   {title:"about",path:"section2"},
@@ -32,7 +26,7 @@ const Links=[
   {title:"contact",path:"contactMe"},
 ];
 
-const LinksShow=Links.map((e)=>{return <li>
+const Links_Show=Links.map((e,index)=>{return <li key={index}>
   <Link
     to={e.path}
     spy={true}
@@ -48,20 +42,39 @@ const LinksShow=Links.map((e)=>{return <li>
     {e.title}
   </Link>
 </li>})
-  function mode() {
-    setdark(!dark);
-    if (dark) {
-      document.documentElement.style.setProperty("--bg-color", "#F0F0F0");
-      document.documentElement.style.setProperty("--bg-2", "#F7F7F7");
-      document.documentElement.style.setProperty("--textColr", "black");
-      document.documentElement.style.setProperty("--SpanColr", "red");
-    } else {
-      document.documentElement.style.setProperty("--bg-color", "#070d1b");
-      document.documentElement.style.setProperty("--bg-2", "#0a101e");
-      document.documentElement.style.setProperty("--textColr", "#fdfeff");
-      document.documentElement.style.setProperty("--SpanColr", "#fec544");
-    }
-  }
+
+const Links_Show_In_Mobil=Links.map((e,index)=>{return <li key={index} style={{ transform:open ? "translateX(0)":"translateX(-200%)" }} >
+  <Link
+    to={e.path}
+    spy={true}
+    smooth={true}
+    hashSpy={true}
+    offset={-150} 
+    duration={500}
+    isDynamic={true}
+    ignoreCancelEvents={false}
+    spyThrottle={500}
+    onClick={()=>{setopen(!open)}}
+  >
+
+    {e.title}
+  </Link>
+</li>})
+
+  // function mode() {
+  //   setdark(!dark);
+  //   if (dark) {
+  //     document.documentElement.style.setProperty("--bg-color", "#F0F0F0");
+  //     document.documentElement.style.setProperty("--bg-2", "#F7F7F7");
+  //     document.documentElement.style.setProperty("--textColr", "black");
+  //     document.documentElement.style.setProperty("--SpanColr", "red");
+  //   } else {
+  //     document.documentElement.style.setProperty("--bg-color", "#070d1b");
+  //     document.documentElement.style.setProperty("--bg-2", "#0a101e");
+  //     document.documentElement.style.setProperty("--textColr", "#fdfeff");
+  //     document.documentElement.style.setProperty("--SpanColr", "#fec544");
+  //   }
+  // }
 
   return (
     <>
@@ -75,112 +88,12 @@ const LinksShow=Links.map((e)=>{return <li>
             </Slide>
           </div>
 
-          <MdOutlineDarkMode id="DarkMode" onClick={mode} />
-          <ul>
-            {/* <li>
-              <Link
-                to="section1"
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                offset={-70}
-                duration={500}
-                isDynamic={true}
-                ignoreCancelEvents={false}
-                spyThrottle={500}
-                
-                
-
-              >
-
-                home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="section2"
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                offset={-200}
-                duration={500}
-                isDynamic={true}
-                ignoreCancelEvents={false}
-                spyThrottle={500}
-              >
-                about
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="section3"
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                offset={-200}
-                duration={500}
-                isDynamic={true}
-                ignoreCancelEvents={false}
-                spyThrottle={500}
-                
-              >
-                SERVICES
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="section4"
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                offset={-200}
-                duration={500}
-                isDynamic={true}
-                ignoreCancelEvents={false}
-                spyThrottle={500}
-                href="/"
-              >
-                skills
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="section6"
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                offset={50}
-                duration={500}
-                delay={1000}
-                isDynamic={true}
-                ignoreCancelEvents={false}
-                spyThrottle={500}
-                href="/"
-              >
-                portfolio
-              </Link>
-            </li>
-            <li>
-              <Link
-                to=""
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                offset={50}
-                duration={500}
-                delay={1000}
-                isDynamic={true}
-                ignoreCancelEvents={false}
-                spyThrottle={500}
-                href="/"
-              >
-                contact
-              </Link>
-            </li> */}
-  {LinksShow}
+          {/* <MdOutlineDarkMode id="DarkMode" onClick={mode} /> */}
+          <ul >
+          {Links_Show}
             <li id="phoneList">
               <FaPhoneAlt fontSize={"15px"} />
-              <a href="/" id="phone">
+              <a href="https://wa.me/00905346833726" target="blank" id="phone">
                 +905346833726
               </a>
             </li>
@@ -202,105 +115,8 @@ const LinksShow=Links.map((e)=>{return <li>
           </div>
         </div>
         {/* mobel */}
-        <ul className="mobelLink">
-          <li style={{ transform: open && "translateY(0)" }}>
-            <Link
-              to="section1"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              offset={-100}
-              duration={500}
-              isDynamic={true}
-              ignoreCancelEvents={false}
-              spyThrottle={500}
-            >
-              home
-            </Link>
-          </li>
-          <li style={{ transform: open && "translateY(0)" }}>
-            <Link
-              to="section2"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              offset={80}
-              isDynamic={true}
-              ignoreCancelEvents={false}
-              spyThrottle={500}
-            >
-              about
-            </Link>
-          </li>
-          <li style={{ transform: open && "translateY(0)" }}>
-            <Link
-              to="section3"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              offset={50}
-              duration={500}
-              
-              isDynamic={true}
-              ignoreCancelEvents={false}
-              spyThrottle={500}
-            >
-              SERVICES
-            </Link>
-          </li>
-          <li style={{ transform: open && "translateY(0)" }}>
-            <Link
-              to="section6"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              offset={50}
-              duration={500}
-             
-              isDynamic={true}
-              ignoreCancelEvents={false}
-              spyThrottle={500}
-            >
-              portfolio
-            </Link>
-          </li>
-          <li style={{ transform: open && "translateY(0)" }}>
-            <Link
-              to="hfgh5"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              offset={50}
-              duration={500}
-             
-              isDynamic={true}
-              ignoreCancelEvents={false}
-              spyThrottle={500}
-            >
-              blog
-            </Link>
-          </li>
-          <li style={{ transform: open && "translateY(0)" }}>
-            <Link
-              to="ffds6"
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              offset={50}
-              duration={500}
-            
-              isDynamic={true}
-              ignoreCancelEvents={false}
-              spyThrottle={500}
-            >
-              contact
-            </Link>
-          </li>
-          {/* <li style={{ transform: open && "translateY(0)" }} id="phoneList">
-            <a href="/" id="phone">
-              +905346833726
-            </a>
-          </li> */}
+        <ul className="mobelLink"style={{transform:open ? "translateX(0)":"translateX(-200%)"}}>
+          {Links_Show_In_Mobil}
         </ul>
       </nav>
     </>

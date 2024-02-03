@@ -41,6 +41,3 @@
         -ms-transform: translateX(-50%);
         -o-transform: translateX(-50%);
     }
-@media screen and (max-width:1150px){
-        #title p{  font-size: 2rem;}
-    }

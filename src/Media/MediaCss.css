@@ -1,0 +1,254 @@
+/* navbar start*/
+@media (max-width:1240px) {
+  
+
+    nav .container{
+            width: 100%;
+           
+           
+        }
+        nav .container ul{
+            display: none;
+        }
+        nav .container .bars{
+            display: block;
+            padding-right:1rem;
+        }
+    }
+    /* end */
+
+    /* start title */
+@media screen and (max-width:1150px){
+        #title,
+        #title p{  font-size: 1.5rem !important; }
+    }
+    /* end */
+
+    /* Hero start 1*/
+@media screen and (max-width:750px) {
+        #section1 div{
+            width: 100%;
+          }
+        #section1  p{
+            padding: 0 1rem;   
+        }
+        #section1 h1{
+            font-size: 2rem !important;
+            text-align: start;
+            padding-left: 20px; 
+        }
+        #section1 h1 span{
+            font-size: 2rem !important;
+        }
+
+    }
+
+
+
+
+@media screen and (max-width:500px) {
+        nav .container{
+            padding: 5px !important;
+        }
+        #section1 div{
+            width: 90% !important;
+            margin: auto !important;
+        }
+        #section1 #social {
+            display: flex !important;
+        }
+        #section1 h1{
+            font-size: 1.1rem !important;
+            text-align: start;
+            padding-left: 0px !important;  
+        }
+        #section1 h1 span{
+            font-size: 1.1rem !important;
+        }
+        /* nav */
+        nav .logo .p {
+            font-size: 1.5rem !important;
+        }
+    }
+    /* end */
+
+    /* about start */
+@media screen and (max-width:1300px) {
+    
+
+        #section2 .container{
+            width: 100% !important;
+        }
+        button{ width: 50% !important;}
+      } 
+      /* end */
+
+      /* start serves adn skills and contact 3 */
+
+@media screen  and (max-width:950px) {
+    /* nav  */
+    .barsspan{
+        margin: 7px auto;
+            }
+    #section3 .container{
+            flex-direction: column;  
+            justify-content: center;
+            width: 100% !important;
+        }    
+        /* start skills */       
+        #skills{
+            flex-direction: column !important;  
+        }
+        #skills #imgeSkills {
+        display: none !important;
+     }
+     #container div{
+        width: 100% !important;
+     }
+     /* end skills */
+    /* start contact me */
+    #contactMe  #container{
+        width: 95% !important;
+                
+                    }
+    #contactMe form{
+        width: 80% !important;
+         margin: auto;
+                    }
+    }
+
+    /* end */
+
+    /* start educations 4 */
+@media screen and (max-width:900px){
+        /* #container4{
+            flex-wrap: wrap;
+            justify-content: center;
+    
+            #experiences, 
+            #educations {
+                width: 100% !important;
+                margin: 20px 0;
+            }
+           
+    }  */
+    
+    /* start portfolio 6 */
+
+   #section6 #container  {
+            width: 100% !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+    
+ 
+    }
+    #section6 #container #project{
+        width: 80% !important;
+}
+     /* end */
+ #aboutImge {
+        width: 100% !important;
+       
+    }
+ #aboutText{  
+        width: 100% !important;
+   }
+#aboutText li{
+    justify-content: space-between !important;
+}
+    }
+   
+@media screen and (min-width:501px) and (max-width: 949px){
+    #skills #skillsProgress,
+    #skills #skillTitle {
+        width: 80% !important;
+        margin: 15px auto;}
+        /*  */
+             
+        #section3 #service{
+            width: 70% !important;
+            height: auto !important;   
+        } 
+
+}
+   
+    /* end */
+    /* End */
+          /* serves */
+@media screen and (max-width:500px) {
+    #section6 #container div{
+        width: 100 !important;
+   }
+    #section3  .container{
+        flex-direction: column;  
+        justify-content: center;
+        width: 90% !important;
+        margin: auto;
+    }
+        #section3 #service{
+            width: 100% !important;
+            height: auto !important;    
+        } 
+        #skills  #skillTitle ,
+        #skills  #skillsProgress{
+            width: 100% !important;
+            padding: 5px !important;
+        } 
+        #skills #imgeSkills {
+            display: none !important;
+         }
+         #section6 #container #project{
+            width: 100% !important;
+    }
+    /* abouttext */
+    #aboutText {
+        padding-left: 5px !important;
+    }
+    #aboutText li {
+        text-align: center !important;
+        flex-direction: column;
+        gap: 0 !important;
+        
+    }
+    /* service */
+    
+    /* contact */
+   #contactInvo #infoIcon {
+        text-align: center !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+    #infoIcon h3 {
+        display: none;
+    }
+    #infoIcon p{
+        font-size: 0.7rem;
+    }
+         /* start contact me */
+    #contactMe  #container{
+        width: 95% !important;
+    
+        }
+    #contactMe form{
+        width: 100% !important;
+        }
+        /* end */
+    /* footer */
+    #footer{
+        text-align: center;
+    }
+    }
+    /* end */
+@media screen and (max-width:1560px) {
+     nav .container{
+            margin: 0;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            }
+        nav .container li{
+            padding-left:0.5rem ;
+        }    
+        }
+
+    
+    
