@@ -19,11 +19,14 @@ function Skills() {
   window.onscroll=()=>{
 
 if( window.innerWidth > 950 && window.scrollY >= 2800 ){
-    setscrol(true)
+    setscrol(true);
+    window.removeEventListener("scroll",onscroll);
 }
 if( window.innerWidth <= 950 && window.scrollY >= 5000  ){
-   setscrol(true)
+   setscrol(true);
+   window.removeEventListener("scroll",onscroll);
 }
+window.removeEventListener("scroll",onscroll);
 } 
     
   const data =[

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactMe.css';
 import { MdOutlineMail } from "react-icons/md";
@@ -8,17 +8,25 @@ import { Fade } from 'react-awesome-reveal';
 
 function ContactMe() {
   const form = useRef();
-
+  const input = useRef();
+  const input1 = useRef();
+  const input2 = useRef();
+  const [removeValue,setremoveValue]= useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_ly85eqs', 'template_yfr1ld7', form.current, 'mNqUYSf5n2hx_U3ei')
-      .then((result) => {
-          console.log(result.text,"send");
-      }, (error) => {
-          console.log(error.text,"error");
-      });
+    // emailjs.sendForm('service_ly85eqs', 'template_yfr1ld7', form.current, 'mNqUYSf5n2hx_U3ei')
+    //   .then((result) => {
+    //       console.log(result.text,"send");
+    //   }, (error) => {
+    //       console.log(error.text,"error");
+    //   });
+    setremoveValue(true);
+    input.current.value="";
+    input1.current.value="";
+    input2.current.innerHTML="";
+    
   };
+  
   return (
     <section id='contactMe'>
       <div id='container'>
@@ -28,15 +36,15 @@ function ContactMe() {
            </Fade>
            <Fade direction='left' triggerOnce={true}>
             <div id='name'>
-                <input type='text'minLength={3} name="user_name" required/>    
+                <input ref={input}  type='text'minLength={3} name="user_name" required/>    
                 <label>your name</label>
             </div>
             <div id='name'>
-                <input type='email' name="user_email" required/>    
+                <input type='email'ref={input1} name="user_email" required/>    
                 <label>your email</label>
             </div>
             <div id='name'className='message' >
-                <textarea name="message" required/>
+                <textarea ref={input2} name="message" required/>
                 <label>your message</label>
                 
             </div>
