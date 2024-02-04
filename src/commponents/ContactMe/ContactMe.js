@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactMe.css';
 import { MdOutlineMail } from "react-icons/md";
@@ -11,21 +11,21 @@ function ContactMe() {
   const input = useRef();
   const input1 = useRef();
   const input2 = useRef();
-  const [removeValue,setremoveValue]= useState(false);
+ 
   const sendEmail = (e) => {
     e.preventDefault();
-    // emailjs.sendForm('service_ly85eqs', 'template_yfr1ld7', form.current, 'mNqUYSf5n2hx_U3ei')
-    //   .then((result) => {
-    //       console.log(result.text,"send");
-    //   }, (error) => {
-    //       console.log(error.text,"error");
-    //   });
-    setremoveValue(true);
+    emailjs.sendForm('service_ly85eqs', 'template_yfr1ld7', form.current, 'mNqUYSf5n2hx_U3ei')
+      .then((result) => {
+          console.log(result.text,"send");
+      }, (error) => {
+          console.log(error.text,"error");
+      });
+  
     input.current.value="";
     input1.current.value="";
-    input2.current.innerHTML="";
-    
+    input2.current.value="";
   };
+  
   
   return (
     <section id='contactMe'>
@@ -69,7 +69,7 @@ function ContactMe() {
           <CiPhone />
           <div>
           <h3>phone</h3>
-          <p>+905346833726</p>
+          <a href="https://wa.me/00905346833726" >+905346833726</a>
           </div>
           </div>
           <div id='infoIcon'>

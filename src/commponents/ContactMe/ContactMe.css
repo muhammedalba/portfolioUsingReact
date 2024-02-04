@@ -76,11 +76,14 @@ form input,textarea{
     display: flex;
     justify-content: center;
 }
+
 #contactMe #contactInvo{
-    color: var(--textColr);
+    color: var(--textColr) ;
     width: 50%;
     padding: 20px;
+    text-decoration: none;
 }
+
 #contactMe #infoIcon{
     display: flex;
     margin: 2rem 0;
@@ -89,6 +92,10 @@ form input,textarea{
     color: var(--parColor);
 
 
+}
+#contactMe #infoIcon a{
+    text-decoration: none;
+    color: var(--parColor);
 }
 #contactMe #infoIcon h3{
     color: var(--SpanColr);
