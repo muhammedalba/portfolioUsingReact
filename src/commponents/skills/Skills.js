@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Skills.css";
 import { Fade } from "react-awesome-reveal";
 
@@ -15,19 +15,17 @@ import { IconContext } from "react-icons";
 
 
 function Skills() {
+const section=useRef();
   const[scrol,setscrol]=useState(false);
   window.onscroll=()=>{
-
-if( window.innerWidth > 950 && window.scrollY >= 2800 ){
+if( window.scrollY >= section.current.offsetTop ){
     setscrol(true);
     window.removeEventListener("scroll",onscroll);
 }
-if( window.innerWidth <= 950 && window.scrollY >= 5000  ){
-   setscrol(true);
-   window.removeEventListener("scroll",onscroll);
-}
+
 window.removeEventListener("scroll",onscroll);
 } 
+
     
   const data =[
     {title:"html",value:80},
@@ -35,7 +33,7 @@ window.removeEventListener("scroll",onscroll);
     {title:"javascript",value:70},
     {title:"bootstrap",value:90},
     {title:"jquery",value:70},
-    {title:"react",value:50},
+    {title:"react/Redux/Redux Toolkit ",value:70},
     {title:"git/github",value:50},
 ]
     
@@ -59,7 +57,7 @@ window.removeEventListener("scroll",onscroll);
 
   
   return (
-    <section id="section4">
+    <section ref={section} id="section4">
       <div className="container">
         <div id="skills">
           
@@ -75,26 +73,16 @@ window.removeEventListener("scroll",onscroll);
             <BsBootstrap  />
             <FaGithub  />
             <FaReact  />
-
-            </IconContext.Provider>
-            {/* <img  src={img1} alt=""/>
-            <img src={img2} alt=""/>
-            <img src={img3} alt=""/>
-            <img src={img4} alt=""/>
-            <img src={img5} alt=""/>
-            <img src={img6} alt=""/>
-            <img src={img7} alt=""/> */}
-           
-            
+            </IconContext.Provider>    
           </div>
           
           </Fade>
           </div>
-      <div id="skillsProgress">
+    <div id="skillsProgress">
 
           {dataShow}
 
-      </div>
+      </div> 
 
         </div>
       </div>

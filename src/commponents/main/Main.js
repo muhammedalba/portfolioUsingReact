@@ -8,7 +8,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { GrGithub } from "react-icons/gr";
 // imge
-import imge from "../../imges/muhammed1.jpg.png";
+import imge from "../../imges/hero-img.jpg";
 
 // 
 
