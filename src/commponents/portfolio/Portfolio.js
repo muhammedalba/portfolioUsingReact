@@ -39,7 +39,7 @@ export default function Portfolio() {
                         {e.title}
                     </span>
 
-                <a target="_blank" href={e.href}>live peview</a>
+                <a  rel="noreferrer" target="_blank" href={e.href}>live peview</a>
                 </div>
                 </Fade>
         })}
