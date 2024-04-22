@@ -29,7 +29,7 @@
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border: 10px solid var(--SpanColr);
+    border: 10px dotted var(--SpanColr);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -63,8 +63,8 @@
         color: var(--textColr);
 }
 
-#social li:hover a{
-    border: 1px solid var(--SpanColr);
+#social li:hover svg{
+
     color: var(--SpanColr);
 }
 #social li a svg {
