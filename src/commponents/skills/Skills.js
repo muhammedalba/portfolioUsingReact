@@ -28,13 +28,16 @@ window.removeEventListener("scroll",onscroll);
 
     
   const data =[
-    {title:"html",value:80},
+    {title:"html",value:80},~
     {title:"css",value:80},
     {title:"javascript",value:70},
     {title:"bootstrap",value:90},
     {title:"jquery",value:70},
     {title:"react/Redux/Redux Toolkit ",value:70},
+    {title:"node.js",value:50},
+    {title:"express",value:50},
     {title:"git/github",value:50},
+    {title:"moongodb",value:50},
 ]
     
  const dataShow=  data.map((e,index)=>{

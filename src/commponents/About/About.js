@@ -2,7 +2,7 @@ import React from 'react'
 import "./About.css"
 import aboutimge from "../../imges/about-removebg-preview.png";
 // import aboutimge from "../../imges/01.png";
-import RESUME from "../../imges/Muhammedalbahle.PDF";
+import RESUME from "../../imges/Muhammed .pdf";
 
 import {Fade} from 'react-awesome-reveal';
 
@@ -40,7 +40,7 @@ function About() {
         <li><p>Freelance:</p><span> Available</span></li>
 
       </ul>
-      <a  href={RESUME} id='Download' download={"muhammedalbahle.pdf"}>Download CV</a>
+      <a  href={RESUME} id='Download' download={"muhammed.pdf"}>Download CV</a>
       </Fade>
       </div>
     </div>
