@@ -2,7 +2,7 @@ import React from 'react'
 import "./About.css"
 import aboutimge from "../../imges/about-removebg-preview.png";
 // import aboutimge from "../../imges/01.png";
-import RESUME from "../../imges/Muhammed .pdf";
+import RESUME from "../../imges/muhammed.pdf";
 
 import {Fade} from 'react-awesome-reveal';
 
